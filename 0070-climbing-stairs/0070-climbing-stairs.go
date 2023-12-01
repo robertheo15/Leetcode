@@ -2,9 +2,11 @@ func climbStairs(n int) int {
 	if n < 2 {
 		return n
 	}
-	secondLast, last := 0, 1
-	for i := 1; i <= n; i++ {
-		secondLast, last = last, secondLast+last
+	dp := make([]int, n)
+	dp[0] = 1
+	dp[1] = 2
+	for i := 2; i < n; i++ {
+		dp[i] = dp[i-1] + dp[i-2]
 	}
-	return last
+	return dp[n-1]
 }
