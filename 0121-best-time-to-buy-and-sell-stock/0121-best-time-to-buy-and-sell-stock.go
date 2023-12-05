@@ -1,4 +1,8 @@
 func maxProfit(prices []int) int {
+    if len(prices) == 0 {
+		return 0
+	}
+    
 	var profit = 0
 	var minPrice = prices[0]
 
