@@ -1,15 +1,10 @@
 func containsDuplicate(nums []int) bool {
-	if len(nums) <= 1 {
-		return false
-	}
-
-	sort.Ints(nums)
-
-	for i := 0; i < len(nums)-1; i++ {
-		if nums[i] == nums[i+1] {
+	set := make(map[int]struct{})
+	for _, num := range nums {
+		if _, hasNum := set[num]; hasNum {
 			return true
 		}
+		set[num] = struct{}{}
 	}
-
 	return false
 }
