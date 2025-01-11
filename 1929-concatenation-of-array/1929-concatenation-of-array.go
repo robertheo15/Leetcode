@@ -1,3 +1,6 @@
 func getConcatenation(nums []int) []int {
-    return append(nums, nums...)
+    for i,_ := range nums{
+        nums = append(nums, nums[i])
+    }
+    return nums
 }
