@@ -1,8 +1,9 @@
 func shuffle(nums []int, n int) []int {
-	result := make([]int, 0, len(nums))
-	for i := 0; i < n; i++ {
-		result = append(result, nums[i])
-		result = append(result, nums[i+n])
+	results := make([]int, 2*n)
+	for i := 0; i < n; i++  {
+        results[2*i] = nums[i]
+        results[2*i+1] = nums[n+i]
 	}
-	return result
+
+	return results
 }
