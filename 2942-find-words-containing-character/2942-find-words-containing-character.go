@@ -11,7 +11,7 @@
 // }
 
 func findWordsContaining(words []string, x byte) []int {
-	nums := make([]int, 0)
+	var nums []int
 
 	for i, word := range words {
 		for _, c := range word {
