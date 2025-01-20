@@ -1,5 +1,5 @@
 func findWordsContaining(words []string, x byte) []int {
-	var nums []int
+	nums := []int{}
 
 	for i, word := range words {
         if strings.ContainsRune(word, rune(x)) {
