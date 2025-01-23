@@ -1,9 +1,9 @@
 func distributeCandies(candyType []int) int {
 	result := len(candyType) / 2
-	candyMap := make(map[int]int, len(candyType))
+	candyMap := make(map[int]bool, len(candyType))
 
 	for _, candy := range candyType {
-		candyMap[candy]++
+		candyMap[candy] = true
 
         //optimize 1
 		if len(candyMap) > result {
