@@ -16,5 +16,5 @@ func distributeCandies(candyType []int) int {
 	// 	result = len(candyMap)
 	// }
 
-	return min(len(candyMap), len(candyType)/2)
+	return min(len(candyMap), result)
 }
