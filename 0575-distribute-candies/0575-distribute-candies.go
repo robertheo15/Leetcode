@@ -5,7 +5,7 @@ func distributeCandies(candyType []int) int {
 	for _, candy := range candyType {
 		candyMap[candy] = true
 
-        //optimize 1
+        // optimize 1
 		if len(candyMap) > result {
 			return result
 		}
