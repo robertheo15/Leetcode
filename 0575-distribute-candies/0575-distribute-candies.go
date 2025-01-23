@@ -9,9 +9,10 @@ func distributeCandies(candyType []int) int {
 			return result
 		}
 	}
-	if len(candyMap) < result {
-		result = len(candyMap)
-	}
 
-	return result
+	// if len(candyMap) < result {
+	// 	result = len(candyMap)
+	// }
+
+	return min(len(candyMap), len(candyType)/2)
 }
