@@ -4,8 +4,11 @@ func distributeCandies(candyType []int) int {
 
 	for _, candy := range candyType {
 		candyMap[candy]++
+
+		if len(candyMap) > result {
+			return result
+		}
 	}
-    
 	if len(candyMap) < result {
 		result = len(candyMap)
 	}
