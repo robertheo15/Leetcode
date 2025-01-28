@@ -1,7 +1,7 @@
 func maxWidthOfVerticalArea(points [][]int) int {
-	tempArray := make([]int, 0)
+	tempArray := make([]int, len(points))
 	for i := 0; i < len(points); i++ {
-		tempArray = append(tempArray, points[i][0])
+		tempArray[i] =  points[i][0]
 	}
 
 	maxWidth := 0
