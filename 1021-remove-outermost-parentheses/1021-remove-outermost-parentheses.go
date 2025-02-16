@@ -18,8 +18,7 @@
 // 	return result
 // }
 func removeOuterParentheses(s string) string {
-
-counter, result := 0, strings.Builder{}
+    counter, result := 0, strings.Builder{}
     for i := range s {
         if s[i] == '(' {
             counter++
@@ -27,10 +26,10 @@ counter, result := 0, strings.Builder{}
                 result.WriteByte(s[i])
             }
         } else {
-            if counter != 1 {
+            counter--
+            if counter > 0 {
                 result.WriteByte(s[i])
             }
-            counter--
         }
     }
 
